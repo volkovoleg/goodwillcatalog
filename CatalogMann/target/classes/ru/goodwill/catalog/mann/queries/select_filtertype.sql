@@ -1,0 +1,5 @@
+select
+	FIAR_PDART as CODE,
+	FIAR_PDFAM as NAME
+from SDAETOKFIAR
+where FIAR_SPRAS = 'R'

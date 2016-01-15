@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich">
+    <f:subview id="status">
+        <script type="text/javascript">
+            var t;
+
+            function proc_begin() {
+                t = setTimeout(function () {
+                    Richfaces.showModalPanel('modalWait');
+                }, 900);
+                return true;
+            }
+
+            function proc_end() {
+                if (t) clearTimeout(t);
+                Richfaces.hideModalPanel('modalWait');
+                return true;
+            }
+        </script>
+
+        <rich:modalPanel id="modalWait" autosized="true" width="350">
+            <h:graphicImage value="img/wait.gif"/>
+            <h:outputText value="Подождите, пожалуйста"/>
+        </rich:modalPanel>
+
+        <a4j:status onstart="proc_begin()" onstop="proc_end()"/>
+    </f:subview>
+</ui:composition>

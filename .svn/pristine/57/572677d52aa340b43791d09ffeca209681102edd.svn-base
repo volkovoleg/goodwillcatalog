@@ -1,0 +1,33 @@
+package ru.goodfil.catalog.utils;
+
+import org.hibernate.Session;
+
+import javax.validation.constraints.NotNull;
+
+/**
+ * Created by Волков Олег on 22.07.14.
+ * Реализация без транзакции для get запросов
+ */
+public abstract class HibernateTemplateWithoutTransaction {
+    private final Session session;
+
+    protected HibernateTemplateWithoutTransaction(@NotNull Session session) {
+        Assert.notNull(session);
+
+        this.session = session;
+    }
+
+    protected abstract Object run(Session session);
+
+    public Object execute() {
+        Object result = null;
+        try {
+            result = run(session);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+        }
+
+        return result;
+    }
+}

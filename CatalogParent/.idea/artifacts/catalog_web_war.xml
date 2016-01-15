@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="catalog.web:war">
+    <output-path>$PROJECT_DIR$/../CatalogWeb/target</output-path>
+    <root id="archive" name="catalog.web-1.1.15.0.war">
+      <element id="artifact" artifact-name="catalog.web:war exploded" />
+    </root>
+  </artifact>
+</component>

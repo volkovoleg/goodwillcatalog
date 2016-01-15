@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:a4j="http://richfaces.org/a4j"
+                xmlns:rich="http://richfaces.org/rich"
+                template="/WEB-INF/layout/base.xhtml">
+    <ui:define name="title">Goodwill Каталог: #{FilterBean.filter.name}</ui:define>
+    <ui:define name="content">
+
+
+        <ui:include src="status.xhtml"/>
+
+        <rich:panel header="#{filterMsg.filter}: #{FilterBean.filter.name}">
+            <f:facet name="header">
+                <h:panelGroup>
+                    <h:form>
+
+                        <h:commandLink action="#{FilterBean.goBack}">
+                            <h:graphicImage value="img/larrowanimate.gif"/>
+                            <h:outputText value="#{filterMsg.back}" style="color:red;font-size: 13px"/>
+                        </h:commandLink>
+                        <rich:spacer width="20"/>
+                        <h:outputText value="#{filterMsg.filter}: #{FilterBean.filter.name} "/>
+                        <h:outputText value="#{FilterBean.filter.filterTypeCode}"
+                                      converter="#{FilterTypeCodeConverter}"/>
+                    </h:form>
+                </h:panelGroup>
+            </f:facet>
+
+            <h:panelGroup id="dvTabs">
+                <rich:tabPanel switchType="client" selectedTab="#{FilterBean.selectedTab}">
+                    <rich:tab label="#{filterMsg.info}" id="info" name="info">
+                        <a4j:include viewId="/pages/filterInfo/filterInfo.xhtml"/>
+                    </rich:tab>
+                    <rich:tab label="#{filterMsg.appliance}" id="appliance" name="appliance">
+                        <a4j:include viewId="/pages/appliance/appliance.xhtml"/>
+                    </rich:tab>
+                    <rich:tab label="#{filterMsg.analogs}" id="oes" name="oes">
+                        <a4j:include viewId="/pages/oes/oes.xhtml"/>
+                    </rich:tab>
+                </rich:tabPanel>
+            </h:panelGroup>
+        </rich:panel>
+    </ui:define>
+</ui:composition>

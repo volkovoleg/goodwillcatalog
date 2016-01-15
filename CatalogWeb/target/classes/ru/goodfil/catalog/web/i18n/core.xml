@@ -1,0 +1,184 @@
+<i18n>
+    <item key="[не выбрано]">
+        <translation locale="en" value="Select..."/>
+    </item>
+    <item key="не выбрано">
+        <translation locale="en" value="Select..."/>
+    </item>
+    <item key="Легковые автомобили">
+        <translation locale="en" value="Passenger cars"/>
+    </item>
+    <item key="Грузовые автомашины и пассажирские автобусы">
+        <translation locale="en" value="Trucks and passenger buses"/>
+    </item>
+    <item key="Специальная техника и двигатели">
+        <translation locale="en" value="Special machinery and engines"/>
+    </item>
+    <item key="Мотоциклы и катера">
+        <translation locale="en" value="Motorcycles and boats"/>
+    </item>
+    <item key="Воздушный (Овальный)">
+        <translation locale="en" value="Air (Oval)"/>
+    </item>
+    <item key="Воздушный (Плоский)">
+        <translation locale="en" value="Air (flat)"/>
+    </item>
+    <item key="Воздушный (Цилиндр)">
+        <translation locale="en" value="Air (cylinder"/>
+    </item>
+    <item key="Воздушный фильтр салона (Круглый)">
+        <translation locale="en" value="Cabin air filter (round)"/>
+    </item>
+    <item key="Воздушный фильтр салона (Овальный)">
+        <translation locale="en" value="Cabin air filter (oval)"/>
+    </item>
+    <item key="Воздушный фильтр салона (Плоский)">
+        <translation locale="en" value="Cabin air filter (flat)"/>
+    </item>
+    <item key="Воздушный фильтр салона (Цилиндр)">
+        <translation locale="en" value="Cabin air filter (cylinder)"/>
+    </item>
+    <item key="Коврик влагопоглощающий (Автомобильный)">
+        <translation locale="en" value="Moisture absorption mat (automobile)"/>
+    </item>
+    <item key="Колодка тормозная (Задняя)">
+        <translation locale="en" value="Brake pad (rear)"/>
+    </item>
+    <item key="Колодка тормозная (Передняя)">
+        <translation locale="en" value="Brake pad (front)"/>
+    </item>
+    <item key="Колодка тормозная (Универсальная)">
+        <translation locale="en" value="Brake pad (universal)"/>
+    </item>
+    <item key="Масляный (Вставка (метал))">
+        <translation locale="en" value="Oil (insert (metal))"/>
+    </item>
+    <item key="Масляный (Вставка (пластик))">
+        <translation locale="en" value="Oil (insert (plastic))"/>
+    </item>
+    <item key="Масляный (Сменный фильтр)">
+        <translation locale="en" value="Oil (replacement filter)"/>
+    </item>
+    <item key="Свечи зажигания (Автомобильные)">
+        <translation locale="en" value="Spark plugs (car)"/>
+    </item>
+    <item key="Сменные лезвия (для стеклоочистителей) (Без мет. направляющих)">
+        <translation locale="en" value="Wiper replacement blades (without metal guides)"/>
+    </item>
+    <item key="Сменные лезвия (для стеклоочистителей) (С мет.направляющими)">
+        <translation locale="en" value="Wiper replacement blades (with metal guides)"/>
+    </item>
+    <item key="Топливный (Вставка)">
+        <translation locale="en" value="Fuel (insert)"/>
+    </item>
+    <item key="Топливный (Магистральный (одностороний))">
+        <translation locale="en" value="Fuel (trunk (one-way))"/>
+    </item>
+    <item key="Топливный (Магистральный (односторонний))">
+        <translation locale="en" value="Fuel (trunk (one-way))"/>
+    </item>
+    <item key="Топливный (Магистральный фильтр)">
+        <translation locale="en" value="Fuel (trunk filter) "/>
+    </item>
+    <item key="Топливный (Сменный фильтр)">
+        <translation locale="en" value="Fuel (trunk filter) "/>
+    </item>
+    <item key="Щетка стеклоочистителя (Безкопусные)">
+        <translation locale="en" value="Windscreen wiper (framless)"/>
+    </item>
+    <item key="Щетка стеклоочистителя (Безкорпусные)">
+        <translation locale="en" value="Windscreen wiper (framless)"/>
+    </item>
+    <item key="Щетка стеклоочистителя (Корпусные)">
+        <translation locale="en" value="Windscreen wiper (framed)"/>
+    </item>
+
+    <item key="Воздушный">
+        <translation locale="en" value="Air"/>
+    </item>
+    <item key="Воздушный фильтр салона">
+        <translation locale="en" value="Cabin air filter"/>
+    </item>
+    <item key="Коврик влагопоглощающий">
+        <translation locale="en" value="Moisture absorption mat"/>
+    </item>
+    <item key="Колодка тормозная">
+        <translation locale="en" value="Brake pad"/>
+    </item>
+    <item key="Масляный">
+        <translation locale="en" value="Oil"/>
+    </item>
+    <item key="Свечи зажигания">
+        <translation locale="en" value="Spark plugs"/>
+    </item>
+    <item key="Сменные лезвия">
+        <translation locale="en" value="Wiper replacement blades"/>
+    </item>
+    <item key="Сменные лезвия (для стеклоочистителей)">
+        <translation locale="en" value="Wiper replacement blades"/>
+    </item>
+    <item key="Топливный">
+        <translation locale="en" value="Fuel"/>
+    </item>
+    <item key="Щетка стеклоочистителя">
+        <translation locale="en" value="Windscreen wiper"/>
+    </item>
+
+    <item key="Круглый">
+        <translation locale="en" value="Round"/>
+    </item>
+    <item key="Овальный">
+        <translation locale="en" value="Oval"/>
+    </item>
+    <item key="Плоский">
+        <translation locale="en" value="Flat"/>
+    </item>
+    <item key="Цилиндр">
+        <translation locale="en" value="Cylinder"/>
+    </item>
+    <item key="Автомобильный">
+        <translation locale="en" value="Automobile"/>
+    </item>
+    <item key="Задняя">
+        <translation locale="en" value="Rear"/>
+    </item>
+    <item key="Передняя">
+        <translation locale="en" value="Front"/>
+    </item>
+    <item key="Универсальная">
+        <translation locale="en" value="Universal"/>
+    </item>
+    <item key="Вставка (метал)">
+        <translation locale="en" value="Insert (metal"/>
+    </item>
+    <item key="Вставка (пластик)">
+        <translation locale="en" value="Insert (plastic"/>
+    </item>
+    <item key="Сменный фильтр">
+        <translation locale="en" value="Replacement filter"/>
+    </item>
+    <item key="Автомобильные">
+        <translation locale="en" value="Car"/>
+    </item>
+    <item key="Без мет. направляющих">
+        <translation locale="en" value="Without metal guides"/>
+    </item>
+    <item key="С мет.направляющими">
+        <translation locale="en" value="With metal guides"/>
+    </item>
+    <item key="Вставка">
+        <translation locale="en" value="Insert"/>
+    </item>
+    <item key="Магистральный (односторонний)">
+        <translation locale="en" value="Trunk (one-way"/>
+    </item>
+    <item key="Магистральный фильтр">
+        <translation locale="en" value="Trunk filter"/>
+    </item>
+    <item key="Безкорпусные">
+        <translation locale="en" value="Framless"/>
+    </item>
+    <item key="Корпусные">
+        <translation locale="en" value="Framed"/>
+    </item>
+</i18n>

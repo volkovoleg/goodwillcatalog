@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
+
+<h:panelGroup id="dvSearchCrossReference">
+    <h:form>
+        <h:inputText id="email" value="#{CrossReferenceBean.noSpamText}" styleClass="email"/>
+        <h:outputText value="#{crossReferenceMsg.min3}" style="font-size: 11px; color:red; font-weight: bold"/><br/>
+        <h:outputLabel value="#{crossReferenceMsg.searchName}" for="tbSearchFilter"
+                       style="font-size: 14px;font-weight: bold;"/>
+        <h:inputText id="tbSearchFilter" value="#{CrossReferenceBean.searchText}">
+        </h:inputText>
+        <a4j:commandButton id="btnSearchCrossReference"
+                           action="#{CrossReferenceBean.search}"
+                           value="#{crossReferenceMsg.search}"
+                           reRender="dvFilters"/>
+        <rich:messages for="tbSearchFilter"/>
+        <rich:hotKey key="return"
+                     handler="#{rich:element('btnSearchCrossReference')}.click()"
+                     selector="#dvSearchCrossReference"/>
+    </h:form>
+</h:panelGroup>
+<h:panelGroup id="dvFilters">
+    <h:panelGroup id="dvFiltersEmpty" rendered="#{empty CrossReferenceBean.oes}">
+        <h:outputText value="#{crossReferenceMsg.filtersSearchHint}" rendered="#{empty CrossReferenceBean.searchText}"/>
+        <h:outputText value="#{crossReferenceMsg.doDataFound}" rendered="#{not empty CrossReferenceBean.searchText}"/>
+    </h:panelGroup>
+    <h:panelGroup id="dvFiltersNotEmpty" rendered="#{not empty CrossReferenceBean.oes}">
+        <h:form>
+            <rich:dataTable id="tblFilters"
+                            value="#{CrossReferenceBean.oes}"
+                            var="oe"
+                            columnClasses="grey bold, grey, white"
+                            sortMode="single"
+                            title="#{searchAutoMsg.filters}"
+                            width="100%"
+                            rows="25"
+                            reRender="dsFiltersTable">
+                <f:facet name="header">
+                    <rich:columnGroup>
+                        <rich:column colspan="3">
+                            <h:outputLabel value="#{searchAutoMsg.filters}"/>
+                        </rich:column>
+                    </rich:columnGroup>
+                </f:facet>
+                <rich:column sortBy="#{oe.oeName}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.name}" title="#{searchAutoMsg.name}"/>
+                    </f:facet>
+                    <h:outputText value="#{oe.oeName}"/>
+                </rich:column>
+                <rich:column sortBy="#{oe.brandName}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{crossReferenceMsg.brand}" title="#{crossReferenceMsg.brand}"/>
+                    </f:facet>
+                    <h:outputText value="#{oe.brandName}"/>
+                </rich:column>
+                <rich:column sortBy="#{oe.filterName}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{crossReferenceMsg.analogFilterName}"
+                                       title="#{crossReferenceMsg.analogFilterName}"/>
+                    </f:facet>
+                    <h:panelGroup rendered="#{oe.onSite}">
+                        <h:outputLink onclick="showFoto(#{oe.filterId});return false;">
+                            <h:outputText value="#{oe.filterName}"/>
+                        </h:outputLink>
+                    </h:panelGroup>
+                    <h:panelGroup rendered="#{!oe.onSite}">
+                        <h:outputText value="#{oe.filterName}"/>
+                    </h:panelGroup>
+                </rich:column>
+                <f:facet name="footer">
+                    <rich:datascroller id="dsFiltersTable"/>
+                </f:facet>
+            </rich:dataTable>
+
+            <rich:jQuery selector="#tblFilters .rich-table-cell"
+                         query="mouseover(function(){jQuery(this).parent().children().addClass('hoovered_row')})"/>
+            <rich:jQuery selector="#tblFilters .rich-table-cell"
+                         query="mouseout(function(){jQuery(this).parent().children().removeClass('hoovered_row')})"/>
+        </h:form>
+    </h:panelGroup>
+</h:panelGroup>
+</html>

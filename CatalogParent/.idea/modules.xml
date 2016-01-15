@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CatalogAdapters/catalog.adapters.iml" filepath="$PROJECT_DIR$/../CatalogAdapters/catalog.adapters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CatalogCore/catalog.core.iml" filepath="$PROJECT_DIR$/../CatalogCore/catalog.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CatalogMann/catalog.mann.iml" filepath="$PROJECT_DIR$/../CatalogMann/catalog.mann.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catalog.parent.iml" filepath="$PROJECT_DIR$/catalog.parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CatalogRunner/catalog.runner.iml" filepath="$PROJECT_DIR$/../CatalogRunner/catalog.runner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CatalogUI/catalog.ui.iml" filepath="$PROJECT_DIR$/../CatalogUI/catalog.ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CatalogUtils/catalog.utils.iml" filepath="$PROJECT_DIR$/../CatalogUtils/catalog.utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CatalogWeb/catalog.web.iml" filepath="$PROJECT_DIR$/../CatalogWeb/catalog.web.iml" />
+    </modules>
+  </component>
+</project>
+

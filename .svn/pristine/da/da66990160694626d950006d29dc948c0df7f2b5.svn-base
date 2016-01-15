@@ -1,0 +1,559 @@
+/*
+ * Created by JFormDesigner on Mon Sep 19 11:54:09 MSD 2011
+ */
+
+package ru.goodfil.catalog.ui.forms;
+
+import com.jgoodies.forms.layout.CellConstraints;
+import com.jgoodies.forms.layout.FormLayout;
+import org.apache.commons.beanutils.converters.StringArrayConverter;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.NotImplementedException;
+import ru.goodfil.catalog.export.domain.oeexport.OesDocumentModel;
+import ru.goodfil.catalog.export.service.ExportService;
+import ru.goodfil.catalog.reporting.OesExporter;
+import ru.goodfil.catalog.reporting.OesXmlExporter;
+import ru.goodfil.catalog.ui.Services;
+import ru.goodfil.catalog.ui.forms.dict.FilterFormWindow;
+import ru.goodfil.catalog.ui.swing.UIUtils;
+import ru.goodfil.catalog.utils.SessionFactoryHolder;
+import ru.goodfil.catalog.utils.SessionProvider;
+
+import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
+
+/**
+ * @author sazonovkirill@gmail.com
+ * @version $Id: MainWindow.java 161 2013-08-07 12:30:13Z chezxxx@gmail.com $
+ */
+public class MainWindow extends JFrame {
+    private final SessionProvider sessionProvider = Services.getSessionProvider();
+    private final ExportService exportService = Services.getExportService();
+
+    public MainWindow() {
+        initComponents();
+    }
+
+    private void QuitMenuItemActionPerformed(ActionEvent e) {
+        if (UIUtils.askQuit()) {
+            dispose();
+        }
+    }
+
+    /**
+     * Сохранить БД
+     *
+     * @param e
+     */
+    private void saveAsMenuItemActionPerformed(ActionEvent e) {
+        try {
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setSelectedFile(new File(new File("~/GoodwillCatalog.h2.db").getCanonicalPath()));
+            fileChooser.setFileFilter(new FileNameExtensionFilter("Каталог (*.h2.db)", "db"));
+            int result = fileChooser.showSaveDialog(this);
+
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File destinationFile = fileChooser.getSelectedFile();
+
+                if (destinationFile != null) {
+                    sessionProvider.close();
+
+                    File database = new File(SessionFactoryHolder.getDatabasePathWithPrefix());
+
+                    try {
+                        FileUtils.copyFile(database, destinationFile);
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                        UIUtils.error("Не удалось сохранить файл!");
+                    }
+
+                    sessionProvider.init();
+                }
+            }
+        } catch (Exception e2) {
+            e2.printStackTrace();
+        }
+    }
+
+    private void openMenuItemActionPerformed(ActionEvent e) {
+        throw new NotImplementedException();
+    }
+
+    private void aboutMenuItemActionPerformed(ActionEvent e) {
+        AboutWindow aboutWindow = new AboutWindow(this);
+        aboutWindow.setVisible(true);
+    }
+
+    private void miImportOeActionPerformed() {
+        ImportOeWindow importOeWindow = new ImportOeWindow(this);
+        importOeWindow.setVisible(true);
+    }
+
+    private void miDeployDatabaseActionPerformed() {
+        DeployDatabaseWindow deployDatabaseWindow = new DeployDatabaseWindow(this);
+        deployDatabaseWindow.setVisible(true);
+    }
+
+    private void miFilterFormsAndTypesActionPerformed(ActionEvent e) {
+        FilterFormWindow filterFormWindow = new FilterFormWindow(this);
+        filterFormWindow.setVisible(true);
+
+        if (filtersPanel != null) {
+            filtersPanel.updateFilterFormResolver();
+            filtersPanel.updateFilterTypeResolver();
+        }
+    }
+
+    class ExportOeTask extends SwingWorker<File, Void> {
+        @Override
+        public File doInBackground() {
+            setProgress(20);
+            OesDocumentModel oesDocumentModel = exportService.getOes();
+
+            setProgress(50);
+            File f = null;
+            try {
+                f = File.createTempFile("goodwill", "catalog");
+                OesExporter.export(oesDocumentModel, f);
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+            setProgress(80);
+            return f;
+        }
+
+        @Override
+        public void done() {
+            setProgress(100);
+            File f = null;
+            try {
+                f = get();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            }
+
+            Toolkit.getDefaultToolkit().beep();
+            JFileChooser saveFile = new JFileChooser();
+            saveFile.setDialogTitle("Выберите файл для сохранения выгрузки ОЕ");
+            saveFile.addChoosableFileFilter(new FileFilter() {
+                @Override
+                public boolean accept(File f) {
+                    if (f == null) return false;
+                    if (f.isDirectory()) return true;
+                    return f.getName().toLowerCase().endsWith("xls");
+                }
+
+                @Override
+                public String getDescription() {
+                    return "Microsoft Excel (*.xls)";
+                }
+            });
+
+            int result = saveFile.showSaveDialog(MainWindow.this);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File dest = saveFile.getSelectedFile();
+                if (!dest.getName().endsWith(".xls")) {
+                    dest = new File(dest.getAbsolutePath() + ".xls");
+                }
+                try {
+                    FileUtils.copyFile(f, dest);
+                } catch (IOException e1) {
+                    throw new RuntimeException(e1);
+                }
+            }
+        }
+    }
+
+    class ExportOeTaskCross extends SwingWorker<File, Void> {
+        @Override
+        public File doInBackground() {
+            setProgress(20);
+            OesDocumentModel oesDocumentModel = exportService.getSimpleOes();
+
+            setProgress(50);
+            File f = null;
+            try {
+                f = File.createTempFile("goodwill", "catalog");                                                                                                                       ;
+                OesExporter.exportToCross(oesDocumentModel, f);
+            } catch (IOException ioe) {
+                throw new RuntimeException(ioe);
+            }
+            setProgress(80);
+            return f;
+        }
+
+        @Override
+        public void done() {
+            setProgress(100);
+            File f = null;
+            try {
+                f = get();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            }
+
+            Toolkit.getDefaultToolkit().beep();
+            JFileChooser saveFile = new JFileChooser();
+            saveFile.setDialogTitle("Выберите файл для сохранения выгрузки ОЕ");
+            saveFile.addChoosableFileFilter(new FileFilter() {
+                @Override
+                public boolean accept(File f) {
+                    if (f == null) return false;
+                    if (f.isDirectory()) return true;
+                    return f.getName().toLowerCase().endsWith("xls");
+                }
+
+                @Override
+                public String getDescription() {
+                    return "Microsoft Excel (*.xls)";
+                }
+            });
+
+            int result = saveFile.showSaveDialog(MainWindow.this);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File dest = saveFile.getSelectedFile();
+                if (!dest.getName().endsWith(".xls")) {
+                    dest = new File(dest.getAbsolutePath() + ".xls");
+                }
+                try {
+                    FileUtils.copyFile(f, dest);
+                } catch (IOException e1) {
+                    throw new RuntimeException(e1);
+                }
+            }
+        }
+    }
+
+    private void miExportOeToExcelActionPerformed(ActionEvent e) {
+        final ProgressMonitor progressMonitor = new ProgressMonitor(this, "Выгрузка ОЕ", "Подождите, производится выгрузка ОЕ", 0, 100);
+        progressMonitor.setProgress(10);
+        progressMonitor.setMillisToPopup(0);
+
+        ExportOeTask task = new ExportOeTask();
+        task.addPropertyChangeListener(new PropertyChangeListener() {
+            @Override
+            public void propertyChange(PropertyChangeEvent evt) {
+                if (evt.getPropertyName().equals("progress")) {
+                    Integer progress = new Integer(evt.getNewValue().toString());
+                    progressMonitor.setProgress(progress);
+                }
+            }
+        });
+        task.execute();
+    }
+
+    private void menuItem1ExportOeCross(ActionEvent e) {
+        final ProgressMonitor progressMonitor = new ProgressMonitor(this, "Выгрузка ОЕ", "Подождите, производится выгрузка ОЕ", 0, 100);
+        progressMonitor.setProgress(10);
+        progressMonitor.setMillisToPopup(0);
+
+        ExportOeTaskCross task = new ExportOeTaskCross();
+        task.addPropertyChangeListener(new PropertyChangeListener() {
+            @Override
+            public void propertyChange(PropertyChangeEvent evt) {
+                if (evt.getPropertyName().equals("progress")) {
+                    Integer progress = new Integer(evt.getNewValue().toString());
+                    progressMonitor.setProgress(progress);
+                }
+            }
+        });
+        task.execute();
+    }
+
+
+    private void menuItem3ActionPerformed(ActionEvent e) {
+        OesDocumentModel oesDocumentModel = exportService.getSimpleOes();
+        OesXmlExporter exporter = new OesXmlExporter();
+        exporter.doExport(oesDocumentModel);
+    }
+
+    private FiltersPanel filtersPanel;
+    private CarsPanel carsPanel;
+    private OePanel oePanel;
+
+    private void initComponents() {
+        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
+        // Generated using JFormDesigner Evaluation license - Ð¢Ð°ÑÑÑÐ½Ð° ÐÐ¾Ð»ÐºÐ¾Ð²Ð°
+        applicationMenuBar = new JMenuBar();
+        applicationMenu = new JMenu();
+        openMenuItem = new JMenuItem();
+        saveAsMenuItem = new JMenuItem();
+        QuitMenuItem = new JMenuItem();
+        menu2 = new JMenu();
+        menuItem2 = new JMenuItem();
+        miImportOe = new JMenuItem();
+        miDeployDatabase = new JMenuItem();
+        miFilterFormsAndTypes = new JMenuItem();
+        menu1 = new JMenu();
+        miExportOeToExcel = new JMenuItem();
+        menuItem1 = new JMenuItem();
+        helpMenu = new JMenu();
+        aboutMenuItem = new JMenuItem();
+        tabsPanel = new JTabbedPane();
+        carsTab = new JPanel();
+        filtersTab = new JPanel();
+        oeTab = new JPanel();
+        CellConstraints cc = new CellConstraints();
+
+        //======== this ========
+        setTitle("Goodwill - \u043a\u0430\u0442\u0430\u043b\u043e\u0433");
+        setIconImage(new ImageIcon(getClass().getResource("/ru/goodfil/catalog/ui/icons/car_compact_orange.png")).getImage());
+        Container contentPane = getContentPane();
+        contentPane.setLayout(new FormLayout(
+            "default:grow",
+            "fill:default:grow"));
+
+        //======== applicationMenuBar ========
+        {
+
+            //======== applicationMenu ========
+            {
+                applicationMenu.setText("\u0424\u0430\u0439\u043b");
+
+                //---- openMenuItem ----
+                openMenuItem.setText("\u041e\u0442\u043a\u0440\u044b\u0442\u044c...");
+                openMenuItem.setIcon(new ImageIcon("E:\\Downloads\\IconExperience - X-Collections\\iconex_ap\\16x16\\plain\\folder_blue.png"));
+                openMenuItem.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        openMenuItemActionPerformed(e);
+                    }
+                });
+                applicationMenu.add(openMenuItem);
+                applicationMenu.addSeparator();
+
+                //---- saveAsMenuItem ----
+                saveAsMenuItem.setText("\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c \u043a\u0430\u043a...");
+                saveAsMenuItem.setIcon(new ImageIcon("E:\\Downloads\\IconExperience - X-Collections\\iconex_ap\\16x16\\plain\\disk_blue.png"));
+                saveAsMenuItem.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        saveAsMenuItemActionPerformed(e);
+                    }
+                });
+                applicationMenu.add(saveAsMenuItem);
+                applicationMenu.addSeparator();
+
+                //---- QuitMenuItem ----
+                QuitMenuItem.setText("\u0412\u044b\u0445\u043e\u0434");
+                QuitMenuItem.setIcon(new ImageIcon("E:\\Downloads\\IconExperience - X-Collections\\iconex_ap\\16x16\\plain\\exit.png"));
+                QuitMenuItem.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        QuitMenuItemActionPerformed(e);
+                    }
+                });
+                applicationMenu.add(QuitMenuItem);
+            }
+            applicationMenuBar.add(applicationMenu);
+
+            //======== menu2 ========
+            {
+                menu2.setText("\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b");
+
+                //---- menuItem2 ----
+                menuItem2.setText("\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438...");
+                menu2.add(menuItem2);
+
+                //---- miImportOe ----
+                miImportOe.setText("\u0418\u043c\u043f\u043e\u0440\u0442 \u041e\u0415...");
+                miImportOe.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        miImportOeActionPerformed();
+                    }
+                });
+                menu2.add(miImportOe);
+
+                //---- miDeployDatabase ----
+                miDeployDatabase.setText("\u0412\u044b\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u0411\u0414 \u043d\u0430 \u0441\u0430\u0439\u0442...");
+                miDeployDatabase.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        miDeployDatabaseActionPerformed();
+                    }
+                });
+                menu2.add(miDeployDatabase);
+
+                //---- miFilterFormsAndTypes ----
+                miFilterFormsAndTypes.setText("\u0422\u0438\u043f\u044b \u0438 \u0444\u043e\u0440\u043c\u044b \u0444\u0438\u043b\u044c\u0442\u0440\u043e\u0432...");
+                miFilterFormsAndTypes.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        miFilterFormsAndTypesActionPerformed(e);
+                    }
+                });
+                menu2.add(miFilterFormsAndTypes);
+
+                //======== menu1 ========
+                {
+                    menu1.setText("\u0412\u044b\u0433\u0440\u0443\u0437\u043a\u0430 OE \u0432 Exel");
+
+                    //---- miExportOeToExcel ----
+                    miExportOeToExcel.setText("\u041a\u0430\u0442\u0430\u043b\u043e\u0433 (\u041a\u043d\u0438\u0433\u0430)");
+                    miExportOeToExcel.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            miExportOeToExcelActionPerformed(e);
+                        }
+                    });
+                    menu1.add(miExportOeToExcel);
+
+                    //---- menuItem1 ----
+                    menuItem1.setText("\u041a\u0440\u043e\u0441\u0441\u044b (\u0418\u043d\u0442\u0435\u0440\u043d\u0435\u0442-\u043c\u0430\u0433\u0430\u0437\u0438\u043d)");
+                    menuItem1.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            menuItem1ExportOeCross(e);
+                        }
+                    });
+                    menu1.add(menuItem1);
+                }
+                menu2.add(menu1);
+            }
+            applicationMenuBar.add(menu2);
+
+            //======== helpMenu ========
+            {
+                helpMenu.setText("\u0421\u043f\u0440\u0430\u0432\u043a\u0430");
+
+                //---- aboutMenuItem ----
+                aboutMenuItem.setText("\u041e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0435...");
+                aboutMenuItem.setIcon(new ImageIcon("E:\\Downloads\\IconExperience - X-Collections\\iconex_op\\16x16\\plain\\banana.png"));
+                aboutMenuItem.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        aboutMenuItemActionPerformed(e);
+                    }
+                });
+                helpMenu.add(aboutMenuItem);
+            }
+            applicationMenuBar.add(helpMenu);
+        }
+        setJMenuBar(applicationMenuBar);
+
+        //======== tabsPanel ========
+        {
+
+            //======== carsTab ========
+            {
+
+                // JFormDesigner evaluation mark
+                carsTab.setBorder(new javax.swing.border.CompoundBorder(
+                    new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
+                        "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
+                        javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+                        java.awt.Color.red), carsTab.getBorder())); carsTab.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
+
+                carsTab.setLayout(null);
+
+                { // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < carsTab.getComponentCount(); i++) {
+                        Rectangle bounds = carsTab.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = carsTab.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    carsTab.setMinimumSize(preferredSize);
+                    carsTab.setPreferredSize(preferredSize);
+                }
+            }
+            tabsPanel.addTab("\u041c\u0430\u0448\u0438\u043d\u044b", carsTab);
+
+            //======== filtersTab ========
+            {
+                filtersTab.setLayout(null);
+
+                { // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < filtersTab.getComponentCount(); i++) {
+                        Rectangle bounds = filtersTab.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = filtersTab.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    filtersTab.setMinimumSize(preferredSize);
+                    filtersTab.setPreferredSize(preferredSize);
+                }
+            }
+            tabsPanel.addTab("\u0418\u0437\u0434\u0435\u043b\u0438\u044f", filtersTab);
+
+            //======== oeTab ========
+            {
+                oeTab.setLayout(null);
+
+                { // compute preferred size
+                    Dimension preferredSize = new Dimension();
+                    for(int i = 0; i < oeTab.getComponentCount(); i++) {
+                        Rectangle bounds = oeTab.getComponent(i).getBounds();
+                        preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
+                        preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+                    }
+                    Insets insets = oeTab.getInsets();
+                    preferredSize.width += insets.right;
+                    preferredSize.height += insets.bottom;
+                    oeTab.setMinimumSize(preferredSize);
+                    oeTab.setPreferredSize(preferredSize);
+                }
+            }
+            tabsPanel.addTab("\u041e\u0415", oeTab);
+        }
+        contentPane.add(tabsPanel, cc.xy(1, 1));
+        pack();
+        setLocationRelativeTo(getOwner());
+        // JFormDesigner - End of component initialization  //GEN-END:initComponents
+
+        carsTab.setLayout(new BorderLayout());
+        carsPanel = new CarsPanel();
+        carsTab.add(carsPanel, BorderLayout.CENTER);
+
+        filtersTab.setLayout(new BorderLayout());
+        filtersPanel = new FiltersPanel();
+        filtersTab.add(filtersPanel, BorderLayout.CENTER);
+
+        oeTab.setLayout(new BorderLayout());
+        oePanel = new OePanel();
+        oeTab.add(oePanel, BorderLayout.CENTER);
+    }
+
+    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
+    // Generated using JFormDesigner Evaluation license - Ð¢Ð°ÑÑÑÐ½Ð° ÐÐ¾Ð»ÐºÐ¾Ð²Ð°
+    private JMenuBar applicationMenuBar;
+    private JMenu applicationMenu;
+    private JMenuItem openMenuItem;
+    private JMenuItem saveAsMenuItem;
+    private JMenuItem QuitMenuItem;
+    private JMenu menu2;
+    private JMenuItem menuItem2;
+    private JMenuItem miImportOe;
+    private JMenuItem miDeployDatabase;
+    private JMenuItem miFilterFormsAndTypes;
+    private JMenu menu1;
+    private JMenuItem miExportOeToExcel;
+    private JMenuItem menuItem1;
+    private JMenu helpMenu;
+    private JMenuItem aboutMenuItem;
+    private JTabbedPane tabsPanel;
+    private JPanel carsTab;
+    private JPanel filtersTab;
+    private JPanel oeTab;
+    // JFormDesigner - End of variables declaration  //GEN-END:variables
+}

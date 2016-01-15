@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
+
+<h:form id="fSearchAuto">
+    <h:panelGrid columns="2" cellpadding="3" cellspacing="3">
+        <h:outputLabel value="#{searchAutoMsg.type}" for="cbVechicleTypes"/>
+        <h:panelGroup id="dvVechicleTypes">
+            <h:selectOneMenu id="cbVechicleTypes"
+                             value="#{SearchAutoBean.vechicleTypes.selectedValue}"
+                             style="width:400px">
+                <f:selectItems value="#{SearchAutoBean.vechicleTypes.items}"/>
+                <a4j:support event="onchange"
+                             action="#{SearchAutoBean.updateMarks}"
+                             limitToList="true"
+                             ajaxSingle="true"
+                             process="cbVechicleTypes"
+                             reRender="dvVechicleTypes,dvManufactors,dvSeries,dvMotorsTable,dvFiltersTable,dvVechicleTypesExcelExport"/>
+            </h:selectOneMenu>
+
+            <h:panelGroup id="dvVechicleTypesExcelExport" rendered="false">
+                <h:panelGroup rendered="#{(not empty SearchAutoBean.vechicleTypes.selectedValue) and SearchAutoBean.isStandaloneVersion}">
+                    <h:commandLink id="exportVechicleType" action="#{SearchAutoBean.exportToExcel.exportVechicleType}">
+                        <h:graphicImage value="/img/excel.png" width="16"/>
+                        <rich:toolTip style="color:black">
+                            <h:outputText value="#{searchAutoMsg.export}"/><br/>
+                            <strong><h:outputText value="#{searchAutoMsg.wait}"/></strong>
+                        </rich:toolTip>
+                    </h:commandLink>
+                </h:panelGroup>
+            </h:panelGroup>
+        </h:panelGroup>
+
+        <h:outputLabel value="#{searchAutoMsg.mark}" for="cbManufactors"/>
+        <h:panelGroup id="dvManufactors">
+            <h:selectOneMenu id="cbManufactors"
+                             value="#{SearchAutoBean.manufactors.selectedValue}"
+                             style="width:400px">
+                <f:selectItems value="#{SearchAutoBean.manufactors.items}"/>
+                <a4j:support event="onchange"
+                             action="#{SearchAutoBean.updateSeries}"
+                             limitToList="true"
+                             ajaxSingle="true"
+                             process="cbManufactors"
+                             reRender="dvVechicleTypes,dvManufactors,dvSeries,dvMotorsTable,dvFiltersTable,dvManufactorsExcelExport"/>
+            </h:selectOneMenu>
+
+            <h:panelGroup id="dvManufactorsExcelExport" rendered="false">
+                <h:panelGroup rendered="#{(not empty SearchAutoBean.manufactors.selectedValue) and SearchAutoBean.isStandaloneVersion}">
+                    <h:commandLink id="exportManufactor" action="#{SearchAutoBean.exportToExcel.exportManufactor}">
+                        <h:graphicImage value="/img/excel.png" width="16"/>
+                        <rich:toolTip style="color:black">
+                            <h:outputText value="#{searchAutoMsg.export}"/><br/>
+                            <strong><h:outputText value="#{searchAutoMsg.wait}"/></strong>
+                        </rich:toolTip>
+                    </h:commandLink>
+                </h:panelGroup>
+            </h:panelGroup>
+        </h:panelGroup>
+
+        <h:outputLabel value="#{searchAutoMsg.model}" for="cbSeries"/>
+        <h:panelGroup id="dvSeries">
+            <h:selectOneMenu id="cbSeries"
+                             value="#{SearchAutoBean.series.selectedValue}"
+                             style="width:400px">
+                <f:selectItems value="#{SearchAutoBean.series.items}"/>
+                <a4j:support event="onchange"
+                             action="#{SearchAutoBean.updateMotors}"
+                             limitToList="true"
+                             ajaxSingle="true"
+                             process="cbSeries"
+                             reRender="dvVechicleTypes,dvManufactors, dvSeries,dvMotorsTable,dvFiltersTable,dvSeriesExcelExport"/>
+            </h:selectOneMenu>
+
+            <h:panelGroup id="dvSeriesExcelExport" rendered="false">
+                <h:panelGroup rendered="#{(not empty SearchAutoBean.series.selectedValue) and SearchAutoBean.isStandaloneVersion}">
+                    <h:commandLink id="exportSeria" action="#{SearchAutoBean.exportToExcel.exportSeria}">
+                        <h:graphicImage value="/img/excel.png" width="16"/>
+                        <rich:toolTip style="color:black">
+                            <h:outputText value="#{searchAutoMsg.export}"/><br/>
+                            <strong><h:outputText value="#{searchAutoMsg.wait}"/></strong>
+                        </rich:toolTip>
+                    </h:commandLink>
+                </h:panelGroup>
+            </h:panelGroup>
+        </h:panelGroup>
+    </h:panelGrid>
+
+    <h:panelGroup id="dvMotorsTable">
+        <h:panelGroup id="dvMotorsTableEmpty" rendered="#{empty SearchAutoBean.motors}">
+            <h:outputText value="#{searchAutoMsg.emptyMotorsWarning}"/>
+        </h:panelGroup>
+
+        <h:panelGroup id="dvMotorsTableNotEmpty" rendered="#{not empty SearchAutoBean.motors}">
+            <rich:dataTable id="tblMotors"
+                            value="#{SearchAutoBean.motors}"
+                            var="motor"
+                            columnClasses="grey, grey bold, white, white, white smaller center, white smaller center"
+                            rowClasses=""
+                            sortMode="single"
+                            title="#{searchAutoMsg.engines}"
+                            width="100%"
+                            rows="20"
+                            reRender="dsMotorsTable"
+                            onRowClick="selectMotor(#{motor.id})">
+                <f:facet name="header">
+                    <rich:columnGroup>
+                        <rich:column colspan="6">
+                            <h:outputLabel value="#{searchAutoMsg.engines}"/>
+                        </rich:column>
+                    </rich:columnGroup>
+                </f:facet>
+                <rich:column sortBy="#{motor.name}"
+                             styleClass="#{motor.id == SearchAutoBean.selectedMotorId ? 'active_row' : 'inactive_row'}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.model}" title="#{searchAutoMsg.model}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.name}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.engine}"
+                             styleClass="#{motor.id == SearchAutoBean.selectedMotorId ? 'active_row' : 'inactive_row'}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.engine}" title="#{searchAutoMsg.engine}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.engine}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.kw}"
+                             styleClass="#{motor.id == SearchAutoBean.selectedMotorId ? 'active_row' : 'inactive_row'}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.kv}" title="#{searchAutoMsg.kv}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.kw}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.hp}"
+                             styleClass="#{motor.id == SearchAutoBean.selectedMotorId ? 'active_row' : 'inactive_row'}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.ls}" title="#{searchAutoMsg.ls}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.hp}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.dateF}"
+                             styleClass="#{motor.id == SearchAutoBean.selectedMotorId ? 'active_row' : 'inactive_row'}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.beg}" title="#{searchAutoMsg.beg}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.dateF}" converter="#{ShortDateTimeConverter}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.dateT}"
+                             styleClass="#{motor.id == SearchAutoBean.selectedMotorId ? 'active_row' : 'inactive_row'}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.end}" title="#{searchAutoMsg.end}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.dateT}" converter="#{ShortDateTimeConverter}"/>
+                </rich:column>
+                <f:facet name="footer">
+                    <rich:datascroller id="dsMotorsTable"/>
+                </f:facet>
+            </rich:dataTable>
+
+            <rich:jQuery selector="#tblMotors .rich-table-row"
+                         query="mouseover(function(){jQuery(this).addClass('hoovered_row')})"/>
+            <rich:jQuery selector="#tblMotors .rich-table-row"
+                         query="mouseout(function(){jQuery(this).removeClass('hoovered_row')})"/>
+        </h:panelGroup>
+    </h:panelGroup>
+
+    <h:panelGroup id="dvFiltersTable">
+        <h:panelGroup id="dvFiltersTableEmpty"
+                      rendered="#{empty SearchAutoBean.filters or empty SearchAutoBean.motors}"></h:panelGroup>
+        <h:panelGroup id="dvFiltersTableNotEmpty"
+                      rendered="#{not empty SearchAutoBean.filters and not empty SearchAutoBean.motors}">
+            <rich:dataTable id="tblFilters"
+                            value="#{SearchAutoBean.filters}"
+                            var="filter"
+                            columnClasses="grey bold, grey, white"
+                            sortMode="single"
+                            title="#{searchAutoMsg.filters}"
+                            width="100%"
+                            rows="20"
+                            reRender="dsFiltersTable">
+                <f:facet name="header">
+                    <rich:columnGroup>
+                        <rich:column colspan="4">
+                            <h:outputLabel value="#{searchAutoMsg.filters}"/>
+                        </rich:column>
+                    </rich:columnGroup>
+                </f:facet>
+                <rich:column sortBy="#{filter.name}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.name}" title="#{searchAutoMsg.name}"/>
+                    </f:facet>
+                    <h:outputText value="#{filter.name}"/>
+                </rich:column>
+                <rich:column sortBy="#{filter.filterTypeCode}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.filterType}" title="#{searchAutoMsg.filterType}"/>
+                    </f:facet>
+                    <h:outputText value="#{filter.filterTypeCode}" converter="#{FilterTypeCodeConverter}"/>
+                </rich:column>
+
+                <rich:column sortBy="#{filter.comment}">
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.comments}" title="#{searchAutoMsg.comments}"/>
+                    </f:facet>
+                    <h:outputText value="#{filter.comment}"/>
+                </rich:column>
+
+                <rich:column>
+                    <f:facet name="header">
+                        <h:outputLabel value="#{searchAutoMsg.additionalInfo}" title="#{searchAutoMsg.additionalInfo}"/>
+                    </f:facet>
+                    <h:panelGrid columns="3" cellpadding="2" cellspacing="2">
+                        <h:outputLink onclick="showFoto(#{filter.id});return false;">
+                            <h:outputText value="#{searchAutoMsg.showFoto}"/>
+                        </h:outputLink>
+                        <h:outputLink onclick="showApplication(#{filter.id});return false;">
+                            <h:outputText value="#{searchAutoMsg.showApplication}"/>
+                        </h:outputLink>
+                        <h:outputLink onclick="showAnalogs(#{filter.id});return false;">
+                            <h:outputText value="#{searchAutoMsg.showAnalogs}"/>
+                        </h:outputLink>
+                    </h:panelGrid>
+                </rich:column>
+                <f:facet name="footer">
+                    <rich:datascroller id="dsFiltersTable"/>
+                </f:facet>
+            </rich:dataTable>
+
+            <rich:jQuery selector="#tblFilters .rich-table-cell"
+                         query="mouseover(function(){jQuery(this).parent().children().addClass('hoovered_row')})"/>
+            <rich:jQuery selector="#tblFilters .rich-table-cell"
+                         query="mouseout(function(){jQuery(this).parent().children().removeClass('hoovered_row')})"/>
+
+        </h:panelGroup>
+    </h:panelGroup>
+</h:form>
+</html>

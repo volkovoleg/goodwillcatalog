@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AjcSettings">
+    <option name="ajcPath" value="C:\Users\Волков Олег\.m2\repository\org\aspectj\aspectjtools\1.6.11\aspectjtools-1.6.11.jar" />
+    <option name="explicitAspectPath" value="true" />
+    <option name="delegateToJavac" value="true" />
+  </component>
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="ajc" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="catalog.adapters" />
+        <module name="catalog.core" />
+        <module name="catalog.mann" />
+        <module name="catalog.runner" />
+        <module name="catalog.ui" />
+        <module name="catalog.utils" />
+        <module name="catalog.web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="catalog.adapters" target="1.6" />
+      <module name="catalog.core" target="1.6" />
+      <module name="catalog.mann" target="1.6" />
+      <module name="catalog.runner" target="1.6" />
+      <module name="catalog.ui" target="1.6" />
+      <module name="catalog.utils" target="1.6" />
+      <module name="catalog.web" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
+

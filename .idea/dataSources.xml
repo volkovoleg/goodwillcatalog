@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3887545420">
+    <data-source source="LOCAL" name="ru:goodfil:catalog:adapters:hibernate.cfg.xml" uuid="14f21775-8d46-46c6-b4d7-c4b6b1caf1ea">
+      <driver-ref>h2.embedded</driver-ref>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:C:/.database/GoodwillCatalog</jdbc-url>
+      <user-name>sa</user-name>
+      <libraries>
+        <library>
+          <url>file://D:\CODE\java\catalog\CatalogWeb\target\catalog.web-1.1.15.0\WEB-INF\lib\javassist-3.12.1.GA.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="resources:ru:goodfil:catalog:ui:hibernate.cfg.xml" uuid="74e9154f-ede8-4bd6-8827-d9c1bd6915a8">
+      <driver-ref>h2.embedded</driver-ref>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:C:/.database/GoodwillCatalog</jdbc-url>
+      <user-name>sa</user-name>
+      <libraries>
+        <library>
+          <url>file://D:\CODE\java\catalog\CatalogWeb\target\catalog.web-1.1.15.0\WEB-INF\lib\javassist-3.12.1.GA.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="webapp:WEB-INF:hibernate.cfg.xml" uuid="a02e6bb9-b4d4-4a12-8f53-f7daafaf0cdb">
+      <driver-ref>h2.embedded</driver-ref>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:C:/.database/GoodwillCatalog;CACHE_SIZE=65536;DB_CLOSE_DELAY=-1;AUTOCOMMIT=ON;LOCK_MODE=0;AUTO_RECONNECT=TRUE</jdbc-url>
+      <user-name>sa</user-name>
+      <libraries>
+        <library>
+          <url>file://D:\CODE\java\catalog\CatalogWeb\target\catalog.web-1.1.15.0\WEB-INF\lib\javassist-3.12.1.GA.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

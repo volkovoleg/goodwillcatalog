@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/looks-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/juli-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/jasper-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/annotations-api-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/ecj-3.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/jsp-api-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/catalina-ha-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/catalina-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/servlet-api-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/el-api-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/coyote-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/tribes-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/forms-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/dbcp-6.0.35.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CatalogRunner/target/lib/jasper-el-6.0.35.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

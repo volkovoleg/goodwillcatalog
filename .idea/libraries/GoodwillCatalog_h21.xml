@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="GoodwillCatalog.h21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CatalogWeb/target/catalog.web-1.1.15.0/WEB-INF/classes/ru/goodfil/catalog/web/loaded/GoodwillCatalog.h2.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

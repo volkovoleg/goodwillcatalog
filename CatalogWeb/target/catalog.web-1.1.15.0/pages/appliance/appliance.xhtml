@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:rich="http://richfaces.org/rich" xmlns:a4j="http://richfaces.org/a4j">
+
+<h:form>
+    <h:panelGrid columns="1" rendered="#{FilterBean.globalVechicleTypeAssigmentEnabled}">
+        <h:outputLabel value="#{filterMsg.globalVechicleTypeAssigment}"/>
+        <h:selectOneListbox style="width: 300px">
+            <f:selectItems value="#{FilterBean.globalVechicleTypes}"/>
+        </h:selectOneListbox>
+    </h:panelGrid>
+
+    <h:panelGrid columns="2" rendered="#{FilterBean.globalVechicleTypeAssigmentDisabled}">
+        <h:outputLabel value="#{filterMsg.manufactor}" for="cbManufactors"/>
+        <h:selectOneMenu id="cbManufactors"
+                         value="#{FilterBean.manufactors.selectedValue}"
+                         style="width:400px">
+            <f:selectItems value="#{FilterBean.manufactors.items}"/>
+            <a4j:support event="onchange"
+                         action="#{FilterBean.updateSeries}"
+                         limitToList="true"
+                         ajaxSingle="true"
+                         process="cbManufactors"
+                         reRender="cbManufactors, dvSeries,dvMotorsTable"/>
+        </h:selectOneMenu>
+
+        <h:outputLabel value="#{filterMsg.seria}" for="cbSeries"/>
+        <h:panelGroup id="dvSeries">
+            <h:selectOneMenu id="cbSeries"
+                             value="#{FilterBean.series.selectedValue}"
+                             style="width: 400px">
+                <f:selectItems value="#{FilterBean.series.items}"/>
+                <a4j:support event="onchange"
+                             action="#{FilterBean.updateMotors}"
+                             limitToList="true"
+                             ajaxSingle="true"
+                             process="cbSeries"
+                             reRender="cbManufactors, dvSeries, dvMotorsTable"/>
+            </h:selectOneMenu>
+        </h:panelGroup>
+    </h:panelGrid>
+
+    <h:panelGroup id="dvMotorsTable" rendered="#{FilterBean.globalVechicleTypeAssigmentDisabled}">
+        <h:panelGroup id="dvMotorsTableEmpty" rendered="#{empty FilterBean.selectedMotorModels}">
+            <h:outputText value="#{filterMsg.emptyManufactorWarning}"/>
+        </h:panelGroup>
+        <h:panelGroup id="dvMotorsTableNotEmpty" rendered="#{not empty FilterBean.selectedMotorModels}">
+            <rich:dataTable id="tblMotors"
+                            value="#{FilterBean.selectedMotorModels}"
+                            var="motor"
+                            sortMode="single"
+                            title="#{filterMsg.appliance}"
+                            width="100%"
+                            rows="30"
+                            reRender="dsMotorsTable"
+                            style="margin-top: 10px">
+                <!--<rich:column sortBy="#{motor.manufcator}">-->
+                <!--<f:facet name="header">-->
+                <!--<h:outputText value="#{filterMsg.manufactor}"/>-->
+                <!--</f:facet>-->
+                <!--<h:outputText value="#{motor.manufcator}"/>-->
+                <!--</rich:column>-->
+                <!--<rich:column sortBy="#{motor.seria}">-->
+                <!--<f:facet name="header">-->
+                <!--<h:outputText value="#{filterMsg.seria}"/>-->
+                <!--</f:facet>-->
+                <!--<h:outputText value="#{motor.seria}"/>-->
+                <!--</rich:column>-->
+                <rich:column sortBy="#{motor.motor}">
+                    <f:facet name="header">
+                        <h:outputText value="#{filterMsg.model}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.motor}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.engine}">
+                    <f:facet name="header">
+                        <h:outputText value="#{filterMsg.motor}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.engine}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.kW}">
+                    <f:facet name="header">
+                        <h:outputText value="#{filterMsg.kw}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.kW}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.hP}">
+                    <f:facet name="header">
+                        <h:outputText value="#{filterMsg.hp}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.hP}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.dateF}">
+                    <f:facet name="header">
+                        <h:outputText value="#{filterMsg.dateF}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.dateF}" converter="#{ShortDateTimeConverter}"/>
+                </rich:column>
+                <rich:column sortBy="#{motor.dateT}">
+                    <f:facet name="header">
+                        <h:outputText value="#{filterMsg.dateT}"/>
+                    </f:facet>
+                    <h:outputText value="#{motor.dateT}" converter="#{ShortDateTimeConverter}"/>
+                </rich:column>
+                <f:facet name="footer">
+                    <rich:datascroller id="dsMotorsTable"/>
+                </f:facet>
+            </rich:dataTable>
+        </h:panelGroup>
+    </h:panelGroup>
+</h:form>
+</html>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.goodfil</groupId>
+    <artifactId>catalog.parent</artifactId>
+    <version>1.1.15.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>../CatalogAdapters</module>
+        <module>../CatalogUtils</module>
+        <module>../CatalogCore</module>
+        <module>../CatalogUI</module>
+        <module>../CatalogWeb</module>
+        <module>../CatalogRunner</module>
+        <module>../CatalogMann</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.build.timestamp.format>dd.MM.yyyy HH:mm</maven.build.timestamp.format>
+        <build.timestamp>${maven.build.timestamp}</build.timestamp>
+
+        <!--
+        Dependencies versions (below)
+        -->
+
+        <!-- Subprojects -->
+        <ru.goodfil.catalog.util.version>1.0</ru.goodfil.catalog.util.version>
+
+        <!-- 3rd Party Libs -->
+        <com.h2database.version>1.3.167</com.h2database.version>
+        <org.hibernate.version>3.6.5.Final</org.hibernate.version>
+        <org.hibernate.validator.version>4.2.0.Final</org.hibernate.validator.version>
+
+        <org.slf4j.version>1.6.6</org.slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+        <javassist.version>3.12.1.GA</javassist.version>
+        <net.java.dev.beansbinding.version>1.2.1</net.java.dev.beansbinding.version>
+        <javax.mail.version>1.4</javax.mail.version>
+        <org.aspectj.version>1.6.11</org.aspectj.version>
+
+        <com.google.inject.guice>3.0</com.google.inject.guice>
+
+        <com.thoughtworks.xstream.version>1.4.2</com.thoughtworks.xstream.version>
+        <org.apache.poi.version>3.5-FINAL</org.apache.poi.version>
+
+        <commons-io.version>2.0.1</commons-io.version>
+        <commons-logging.version>1.1.1</commons-logging.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-beanutils.version>1.8.3</commons-beanutils.version>
+
+        <org.testng.version>6.1.1</org.testng.version>
+        <junit.version>3.8.1</junit.version>
+
+        <com.jgoodies.forms.version>1.2.1</com.jgoodies.forms.version>
+        <com.jgoodies.looks.version>2.2.2</com.jgoodies.looks.version>
+        <com.jgoodies.binding.version>2.0.6</com.jgoodies.binding.version>
+        <com.jgoodies.validation.version>2.0.1</com.jgoodies.validation.version>
+
+        <org.aspectj.weaver.version>1.7.0</org.aspectj.weaver.version>
+        <spring-aspects.version>3.1.2.RELEASE</spring-aspects.version>
+
+        <richfaces.version>3.3.3.Final</richfaces.version>
+        <javax.faces.version>1.2_12</javax.faces.version>
+        <xerces.version>2.10.0</xerces.version>
+        <jhighlight.version>1.0</jhighlight.version>
+
+        <javax.servlet.servlet-api.version>2.4</javax.servlet.servlet-api.version>
+        <javax.servlet.jsp-api.version>2.0</javax.servlet.jsp-api.version>
+        <jstl.version>1.0</jstl.version>
+        <javax.el.el-api.version>1.0</javax.el.el-api.version>
+        <com.sun.facelets.version>1.1.14</com.sun.facelets.version>
+        <org.tuckey.urlrewrite.version>2.5.2</org.tuckey.urlrewrite.version>
+
+        <javax.annotation.jsr250-api.version>1.0</javax.annotation.jsr250-api.version>
+        <org.jsoup.version>1.7.2</org.jsoup.version>
+        <net.sf.ehcache.version>2.6.0</net.sf.ehcache.version>
+        <!--
+        Build properties (below)
+        -->
+        <maven-compiler-plugin.version>2.5.1</maven-compiler-plugin.version>
+        <maven-dependency-plugin.version>2.5.1</maven-dependency-plugin.version>
+        <maven-jar-plugin.version>2.4</maven-jar-plugin.version>
+        <aspectj-maven-plugin.version>1.4</aspectj-maven-plugin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${org.hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${org.hibernate.validator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${com.h2database.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+                <version>${com.google.inject.guice}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.thoughtworks.xstream</groupId>
+                <artifactId>xstream</artifactId>
+                <version>${com.thoughtworks.xstream.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons-logging.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${org.apache.poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jgoodies</groupId>
+                <artifactId>forms</artifactId>
+                <version>${com.jgoodies.forms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jgoodies</groupId>
+                <artifactId>looks</artifactId>
+                <version>${com.jgoodies.looks.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jgoodies</groupId>
+                <artifactId>binding</artifactId>
+                <version>${com.jgoodies.binding.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jgoodies</groupId>
+                <artifactId>validation</artifactId>
+                <version>${com.jgoodies.validation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.java.dev.beansbinding</groupId>
+                <artifactId>beansbinding</artifactId>
+                <version>${net.java.dev.beansbinding.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>${javax.mail.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${org.aspectj.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${javax.servlet.servlet-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${javax.servlet.jsp-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${javax.servlet.jsp-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>jstl</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.faces</groupId>
+                <artifactId>jsf-api</artifactId>
+                <version>${javax.faces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.faces</groupId>
+                <artifactId>jsf-impl</artifactId>
+                <version>${javax.faces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.el</groupId>
+                <artifactId>el-api</artifactId>
+                <version>${javax.el.el-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>el-impl</groupId>
+                <artifactId>el-impl</artifactId>
+                <version>${javax.el.el-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>jsr250-api</artifactId>
+                <version>${javax.annotation.jsr250-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.richfaces.framework</groupId>
+                <artifactId>richfaces-api</artifactId>
+                <version>${richfaces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.richfaces.framework</groupId>
+                <artifactId>richfaces-impl</artifactId>
+                <version>${richfaces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.richfaces.ui</groupId>
+                <artifactId>richfaces-ui</artifactId>
+                <version>${richfaces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>xerces</groupId>
+                <artifactId>xercesImpl</artifactId>
+                <version>${xerces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.uwyn</groupId>
+                <artifactId>jhighlight</artifactId>
+                <version>${jhighlight.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.richfaces.samples</groupId>
+                <artifactId>laguna</artifactId>
+                <version>${richfaces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.richfaces.samples</groupId>
+                <artifactId>glassX</artifactId>
+                <version>${richfaces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.richfaces.samples</groupId>
+                <artifactId>darkX</artifactId>
+                <version>${richfaces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.richfaces.samples</groupId>
+                <artifactId>themes</artifactId>
+                <version>${richfaces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.richfaces.samples</groupId>
+                <artifactId>violetRays</artifactId>
+                <version>${richfaces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.facelets</groupId>
+                <artifactId>jsf-facelets</artifactId>
+                <version>${com.sun.facelets.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.tuckey</groupId>
+                <artifactId>urlrewrite</artifactId>
+                <version>${org.tuckey.urlrewrite.version}</version>
+            </dependency>
+
+            <!-- c3p0 connection pool -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-c3p0</artifactId>
+                <version>${org.hibernate.version}</version>
+            </dependency>
+
+            <!-- EHcache -->
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache-core</artifactId>
+                <version>${net.sf.ehcache.version}</version>
+            </dependency>
+
+            <!-- Logging -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${org.slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${org.slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${org.slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${org.testng.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${org.jsoup.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>**/*version.properties</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*version.properties</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${maven-dependency-plugin.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>aspectj-maven-plugin</artifactId>
+                    <version>${aspectj-maven-plugin.version}</version>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                        <showWeaveInfo>false</showWeaveInfo>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>compile</goal>
+                                <goal>test-compile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

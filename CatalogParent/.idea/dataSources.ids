@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="src:main:webapp:WEB-INF:hibernate.cfg.xml" uuid="e09bfb59-ad44-4c60-8b0e-5dd579f06da3">
+    <database-info product="H2" version="1.3.168 (2012-07-13)" jdbc-version="3.0" driver-name="H2 JDBC Driver" driver-version="1.3.168 (2012-07-13)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG"/>
+    <schema name="PUBLIC" catalog="GOODWILLCATALOG"/>
+    <table name="CATALOGS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="CATALOG_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="COLLATIONS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="KEY" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="COLUMNS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ORDINAL_POSITION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="COLUMN_DEFAULT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_NULLABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHARACTER_MAXIMUM_LENGTH" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHARACTER_OCTET_LENGTH" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NUMERIC_PRECISION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NUMERIC_PRECISION_RADIX" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NUMERIC_SCALE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHARACTER_SET_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLLATION_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="NULLABLE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="IS_COMPUTED" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="SELECTIVITY" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHECK_CONSTRAINT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SEQUENCE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SOURCE_DATA_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+    </table>
+    <table name="COLUMN_PRIVILEGES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="GRANTOR" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="GRANTEE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PRIVILEGE_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_GRANTABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="CONSTANTS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="CONSTANT_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTANT_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTANT_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="CONSTRAINTS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="CONSTRAINT_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTRAINT_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTRAINT_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTRAINT_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="UNIQUE_INDEX_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CHECK_EXPRESSION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_LIST" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="CROSS_REFERENCES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="PKTABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PKTABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PKTABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PKCOLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FKTABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FKTABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FKTABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FKCOLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ORDINAL_POSITION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="UPDATE_RULE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="DELETE_RULE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="FK_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PK_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DEFERRABILITY" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+    </table>
+    <table name="DOMAINS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="DOMAIN_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DOMAIN_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DOMAIN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_DEFAULT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_NULLABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="PRECISION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SCALE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SELECTIVITY" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHECK_CONSTRAINT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="FUNCTION_ALIASES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="ALIAS_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ALIAS_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ALIAS_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="JAVA_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="JAVA_METHOD" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_COUNT" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="RETURNS_RESULT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SOURCE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="FUNCTION_COLUMNS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="ALIAS_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ALIAS_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ALIAS_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="JAVA_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="JAVA_METHOD" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_COUNT" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="POS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="COLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PRECISION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SCALE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="RADIX" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="NULLABLE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="COLUMN_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_DEFAULT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="HELP" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SECTION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TOPIC" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SYNTAX" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TEXT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="INDEXES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="NON_UNIQUE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="INDEX_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ORDINAL_POSITION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="COLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CARDINALITY" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="PRIMARY_KEY" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="INDEX_TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_GENERATED" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="INDEX_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="ASC_OR_DESC" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PAGES" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="FILTER_CONDITION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SORT_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CONSTRAINT_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="INDEX_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="IN_DOUBT" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TRANSACTION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="LOCKS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SESSION_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="LOCK_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="RIGHTS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="GRANTEE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="GRANTEETYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="GRANTEDROLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="RIGHTS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="ROLES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="SCHEMATA" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="CATALOG_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SCHEMA_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SCHEMA_OWNER" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DEFAULT_CHARACTER_SET_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DEFAULT_COLLATION_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_DEFAULT" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="SEQUENCES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="SEQUENCE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SEQUENCE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SEQUENCE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CURRENT_VALUE" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="INCREMENT" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="IS_GENERATED" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CACHE" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="SESSIONS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="USER_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SESSION_START" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATEMENT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATEMENT_START" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="SESSION_STATE" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="KEY" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="SETTINGS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="VALUE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="TABLES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STORAGE_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="LAST_MODIFICATION" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="TABLE_PRIVILEGES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="GRANTOR" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="GRANTEE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PRIVILEGE_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_GRANTABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="TABLE_TYPES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="TRIGGERS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TRIGGER_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TRIGGER_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TRIGGER_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TRIGGER_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="BEFORE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="JAVA_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="QUEUE_SIZE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NO_WAIT" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="TYPE_INFO" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="PRECISION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="PREFIX" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SUFFIX" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PARAMS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="AUTO_INCREMENT" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="MINIMUM_SCALE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="MAXIMUM_SCALE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="RADIX" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="POS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CASE_SENSITIVE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="NULLABLE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="SEARCHABLE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+    </table>
+    <table name="USERS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ADMIN" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="VIEWS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="VIEW_DEFINITION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CHECK_OPTION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_UPDATABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="BRAND" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfOTUxN0ZCNzVfQUZGRl80MTZDXzg5NzRfRTkzNUM2N0E5NzgxKQ==" autoIncrement="true"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="SEARCHNAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STANDALONESTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="CONSTRAINT_3" columns="ID"/>
+      <index name="BRANDNI" unique="false" columns="NAME"/>
+      <index name="BRANDSNI" unique="false" columns="SEARCHNAME"/>
+    </table>
+    <table name="DM_FILTERS_TYPES_FORMS" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="FILTER_ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="FILTER_APPLYTOALL_VT1" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="FILTER_APPLYTOALL_VT2" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="FILTER_APPLYTOALL_VT3" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="FILTER_APPLYTOALL_VT4" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="FITLER_TYPE_ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="FILTER_TYPE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="FILTER_FORM_ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="FILTER_FORM_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <primary-key name="CONSTRAINT_6" columns="FILTER_ID"/>
+    </table>
+    <table name="FILTER" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfMTU5QTQzM0NfMjc2Rl80MjI2X0JCQTJfQjNCMEZERjk4Mjg1KQ==" autoIncrement="true"/>
+      <column name="APARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="APPLYTOALL_VT1" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="APPLYTOALL_VT2" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="APPLYTOALL_VT3" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="APPLYTOALL_VT4" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="BPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DISABLED" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="EPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="EAN" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERFORMID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTERTYPECODE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="GPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="HPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IMAGE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="NRPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="OE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="PBPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SEARCHNAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_7" columns="ID"/>
+      <index name="APPLYTOALLVT1" unique="false" columns="APPLYTOALL_VT1"/>
+      <index name="APPLYTOALLVT2" unique="false" columns="APPLYTOALL_VT2"/>
+      <index name="APPLYTOALLVT3" unique="false" columns="APPLYTOALL_VT3"/>
+      <index name="APPLYTOALLVT4" unique="false" columns="APPLYTOALL_VT4"/>
+      <index name="FILTERFORMIDINDEX" unique="false" columns="FILTERFORMID"/>
+      <index name="FILTERNI" unique="false" columns="NAME"/>
+      <index name="FILTERSNI" unique="false" columns="SEARCHNAME"/>
+      <index name="FILTERTYPECODEINDEX" unique="false" columns="FILTERTYPECODE"/>
+    </table>
+    <table name="FILTERFORM" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfQ0I0MUEzMDRfNDM1M180NTIxX0FGMENfNkNDMTkwQjlDQUU2KQ==" autoIncrement="true"/>
+      <column name="APARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="BPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="BPPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="CPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="DPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="EPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="FPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="FILTERTYPECODE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="GPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="HPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="NRPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="IMAGE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_C" columns="ID"/>
+      <index name="FILTERFORMFILTERTYPECODEI" unique="false" columns="FILTERTYPECODE"/>
+    </table>
+    <table name="FILTERSANDMOTORS" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNEExMkExMERfREM2NV80OTI0X0JFQ0RfNjIyNUE0NjM0NkE4KQ==" autoIncrement="true"/>
+      <column name="FILTERID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="MOTORID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="FILTERCOMMENT" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_77" columns="ID"/>
+      <index name="FILTERIDINDEX" unique="false" columns="FILTERID"/>
+      <index name="MOTORIDINDEX" unique="false" columns="MOTORID"/>
+    </table>
+    <table name="FILTERSANDOES" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfODdBOEU4NTdfRUU4M180MUVGXzk0M0ZfM0FCRTgzODM5NTRGKQ==" autoIncrement="true"/>
+      <column name="FILTERID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="OEID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="CONSTRAINT_9" columns="ID"/>
+      <index name="FILTEROEFILTERIDINDEX" unique="false" columns="FILTERID"/>
+      <index name="FILTEROEOEIDINDEX" unique="false" columns="OEID"/>
+    </table>
+    <table name="FILTERTYPE" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNzNGRDY2NjJfMzVFN180OTBCX0FEREZfQ0E3RTMyRDIzNzlCKQ==" autoIncrement="true"/>
+      <column name="CODE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_C0" columns="ID"/>
+    </table>
+    <table name="MANUFACTOR" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfQUM5Qjg5MUFfRjI5Q180MDY4Xzg1Q0FfQjRBMjNCQkNFNDFFKQ==" autoIncrement="true"/>
+      <column name="DISABLED" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="VECHICLETYPEID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="CONSTRAINT_D" columns="ID"/>
+      <index name="VECHICLETYPEIDINDEX" unique="false" columns="VECHICLETYPEID"/>
+    </table>
+    <table name="MOTOR" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfQkQ5OTk4NTNfOTAwQV80MUQ1Xzg1RTdfNjE0QjIwOEFFQjlGKQ==" autoIncrement="true"/>
+      <column name="DATEF" sqlType="TIMESTAMP" length="23" precision="10" nullable="true" jdbcType="93"/>
+      <column name="DATET" sqlType="TIMESTAMP" length="23" precision="10" nullable="true" jdbcType="93"/>
+      <column name="DISABLED" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="ENGINE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="HP" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="KW" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="SERIAID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="CONSTRAINT_4" columns="ID"/>
+      <index name="SERIAIDINDEX" unique="false" columns="SERIAID"/>
+    </table>
+    <table name="OE" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfRTVCNDUyNjdfMjA3MF80MzE4X0EzQzFfOEI2QkM1MDMyMkY5KQ==" autoIncrement="true"/>
+      <column name="BRANDID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="SEARCHNAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_9D" columns="ID"/>
+      <index name="BRANDIDINDEX" unique="false" columns="BRANDID"/>
+      <index name="OENI" unique="false" columns="NAME"/>
+      <index name="OESNI" unique="false" columns="SEARCHNAME"/>
+    </table>
+    <table name="RECORDATION" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfM0ZBMjIwRUFfNDExOV80RjUwXzhGMENfQTRGNzNBRDlDRTY0KQ==" autoIncrement="true"/>
+      <column name="DELETEOBJECT" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CURRENTDATE" sqlType="TIMESTAMP" length="23" precision="10" nullable="true" jdbcType="93"/>
+      <column name="IP" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_CE" columns="ID"/>
+    </table>
+    <table name="SERIA" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfMDc5MEYzRUFfQzZBQl80ODFEX0FEMTdfMjJGNUYwMkM2RDU4KQ==" autoIncrement="true"/>
+      <column name="DISABLED" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="MANUFACTORID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <primary-key name="CONSTRAINT_4B" columns="ID"/>
+      <index name="MANUFACTORIDINDEX" unique="false" columns="MANUFACTORID"/>
+    </table>
+    <table name="SETTING" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNTAwMUY4OUFfQjFCMl80QTdBX0I0NkVfQkNERkZCRDQwNEVFKQ==" autoIncrement="true"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="VALUE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_A" columns="ID"/>
+      <index name="SETTINGNAMEINDEX" unique="false" columns="NAME"/>
+    </table>
+    <table name="VECHICLETYPE" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNzdDRjlGOTVfOTA2NV80NTU1X0I1RjBfNTU4MjFBNUQ3Qjk0KQ==" autoIncrement="true"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <primary-key name="CONSTRAINT_5" columns="ID"/>
+    </table>
+    <table name="V_FULL_EXPORT" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="VECHICLETYPE_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="VECHICLETYPE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MANUFACTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="MANUFACTOR_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SERIA_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="SERIA_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="MOTOR_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ENGINE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="KW" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="HP" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATEF" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATET" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_TYPE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_FULL_EXPORT_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="VECHICLETYPE_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="VECHICLETYPE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MANUFACTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="MANUFACTOR_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SERIA_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="SERIA_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="MOTOR_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ENGINE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="KW" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="HP" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATEF" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATET" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_TYPE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT1" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT1_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT2" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT2_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT3" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT3_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT4" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT4_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GROUPED" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GROUPED_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_OE_REPORT" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="BRAND_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="OE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_OE_REPORT_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="BRAND_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="OE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+  </data-source>
+  <data-source source="LOCAL" name="ru:goodfil:catalog:adapters:hibernate.cfg.xml" uuid="3cbc422c-fd45-4d20-883b-2270b7ba8b73">
+    <database-info product="H2" version="1.3.168 (2012-07-13)" jdbc-version="3.0" driver-name="H2 JDBC Driver" driver-version="1.3.168 (2012-07-13)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG"/>
+    <schema name="PUBLIC" catalog="GOODWILLCATALOG"/>
+    <table name="CATALOGS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="CATALOG_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="COLLATIONS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="KEY" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="COLUMNS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ORDINAL_POSITION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="COLUMN_DEFAULT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_NULLABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHARACTER_MAXIMUM_LENGTH" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHARACTER_OCTET_LENGTH" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NUMERIC_PRECISION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NUMERIC_PRECISION_RADIX" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NUMERIC_SCALE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHARACTER_SET_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLLATION_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="NULLABLE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="IS_COMPUTED" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="SELECTIVITY" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHECK_CONSTRAINT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SEQUENCE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SOURCE_DATA_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+    </table>
+    <table name="COLUMN_PRIVILEGES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="GRANTOR" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="GRANTEE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PRIVILEGE_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_GRANTABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="CONSTANTS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="CONSTANT_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTANT_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTANT_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="CONSTRAINTS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="CONSTRAINT_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTRAINT_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTRAINT_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CONSTRAINT_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="UNIQUE_INDEX_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CHECK_EXPRESSION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_LIST" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="CROSS_REFERENCES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="PKTABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PKTABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PKTABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PKCOLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FKTABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FKTABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FKTABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FKCOLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ORDINAL_POSITION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="UPDATE_RULE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="DELETE_RULE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="FK_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PK_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DEFERRABILITY" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+    </table>
+    <table name="DOMAINS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="DOMAIN_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DOMAIN_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DOMAIN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_DEFAULT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_NULLABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="PRECISION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SCALE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SELECTIVITY" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CHECK_CONSTRAINT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="FUNCTION_ALIASES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="ALIAS_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ALIAS_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ALIAS_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="JAVA_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="JAVA_METHOD" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_COUNT" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="RETURNS_RESULT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SOURCE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="FUNCTION_COLUMNS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="ALIAS_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ALIAS_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ALIAS_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="JAVA_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="JAVA_METHOD" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_COUNT" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="POS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="COLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PRECISION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SCALE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="RADIX" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="NULLABLE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="COLUMN_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="COLUMN_DEFAULT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="HELP" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SECTION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TOPIC" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SYNTAX" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TEXT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="INDEXES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="NON_UNIQUE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="INDEX_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ORDINAL_POSITION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="COLUMN_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CARDINALITY" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="PRIMARY_KEY" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="INDEX_TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_GENERATED" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="INDEX_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="ASC_OR_DESC" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PAGES" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="FILTER_CONDITION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="SORT_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CONSTRAINT_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="INDEX_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="IN_DOUBT" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TRANSACTION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="LOCKS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SESSION_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="LOCK_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="RIGHTS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="GRANTEE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="GRANTEETYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="GRANTEDROLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="RIGHTS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="ROLES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="SCHEMATA" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="CATALOG_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SCHEMA_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SCHEMA_OWNER" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DEFAULT_CHARACTER_SET_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DEFAULT_COLLATION_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_DEFAULT" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="SEQUENCES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="SEQUENCE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SEQUENCE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SEQUENCE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CURRENT_VALUE" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="INCREMENT" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="IS_GENERATED" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CACHE" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="SESSIONS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="USER_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SESSION_START" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATEMENT" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATEMENT_START" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="SESSION_STATE" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="KEY" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="SETTINGS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="VALUE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="TABLES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STORAGE_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="LAST_MODIFICATION" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="TABLE_PRIVILEGES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="GRANTOR" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="GRANTEE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PRIVILEGE_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_GRANTABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="TABLE_TYPES" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="TRIGGERS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TRIGGER_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TRIGGER_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TRIGGER_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TRIGGER_TYPE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="BEFORE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="JAVA_CLASS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="QUEUE_SIZE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NO_WAIT" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SQL" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="TYPE_INFO" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TYPE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATA_TYPE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="PRECISION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="PREFIX" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SUFFIX" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="PARAMS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="AUTO_INCREMENT" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="MINIMUM_SCALE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="MAXIMUM_SCALE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="RADIX" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="POS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="CASE_SENSITIVE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="NULLABLE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+      <column name="SEARCHABLE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5"/>
+    </table>
+    <table name="USERS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ADMIN" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="VIEWS" schema="INFORMATION_SCHEMA" catalog="GOODWILLCATALOG" type="SYSTEM TABLE">
+      <column name="TABLE_CATALOG" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_SCHEMA" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TABLE_NAME" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="VIEW_DEFINITION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CHECK_OPTION" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IS_UPDATABLE" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="REMARKS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="BRAND" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfOTUxN0ZCNzVfQUZGRl80MTZDXzg5NzRfRTkzNUM2N0E5NzgxKQ==" autoIncrement="true"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="SEARCHNAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STANDALONESTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="CONSTRAINT_3" columns="ID"/>
+      <index name="BRANDNI" unique="false" columns="NAME"/>
+      <index name="BRANDSNI" unique="false" columns="SEARCHNAME"/>
+    </table>
+    <table name="DM_FILTERS_TYPES_FORMS" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="FILTER_ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="FILTER_APPLYTOALL_VT1" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="FILTER_APPLYTOALL_VT2" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="FILTER_APPLYTOALL_VT3" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="FILTER_APPLYTOALL_VT4" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="FITLER_TYPE_ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="FILTER_TYPE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="FILTER_FORM_ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="FILTER_FORM_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <primary-key name="CONSTRAINT_6" columns="FILTER_ID"/>
+    </table>
+    <table name="FILTER" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfMTU5QTQzM0NfMjc2Rl80MjI2X0JCQTJfQjNCMEZERjk4Mjg1KQ==" autoIncrement="true"/>
+      <column name="APARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="APPLYTOALL_VT1" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="APPLYTOALL_VT2" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="APPLYTOALL_VT3" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="APPLYTOALL_VT4" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="BPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DISABLED" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="EPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="EAN" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERFORMID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTERTYPECODE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="GPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="HPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="IMAGE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="NRPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="OE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="PBPARAM" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SEARCHNAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_7" columns="ID"/>
+      <index name="APPLYTOALLVT1" unique="false" columns="APPLYTOALL_VT1"/>
+      <index name="APPLYTOALLVT2" unique="false" columns="APPLYTOALL_VT2"/>
+      <index name="APPLYTOALLVT3" unique="false" columns="APPLYTOALL_VT3"/>
+      <index name="APPLYTOALLVT4" unique="false" columns="APPLYTOALL_VT4"/>
+      <index name="FILTERFORMIDINDEX" unique="false" columns="FILTERFORMID"/>
+      <index name="FILTERNI" unique="false" columns="NAME"/>
+      <index name="FILTERSNI" unique="false" columns="SEARCHNAME"/>
+      <index name="FILTERTYPECODEINDEX" unique="false" columns="FILTERTYPECODE"/>
+    </table>
+    <table name="FILTERFORM" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfQ0I0MUEzMDRfNDM1M180NTIxX0FGMENfNkNDMTkwQjlDQUU2KQ==" autoIncrement="true"/>
+      <column name="APARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="BPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="BPPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="CPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="DPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="EPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="FPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="FILTERTYPECODE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="GPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="HPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="NRPARAM" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="IMAGE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_C" columns="ID"/>
+      <index name="FILTERFORMFILTERTYPECODEI" unique="false" columns="FILTERTYPECODE"/>
+    </table>
+    <table name="FILTERSANDMOTORS" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNEExMkExMERfREM2NV80OTI0X0JFQ0RfNjIyNUE0NjM0NkE4KQ==" autoIncrement="true"/>
+      <column name="FILTERID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="MOTORID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="FILTERCOMMENT" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_77" columns="ID"/>
+      <index name="FILTERIDINDEX" unique="false" columns="FILTERID"/>
+      <index name="MOTORIDINDEX" unique="false" columns="MOTORID"/>
+    </table>
+    <table name="FILTERSANDOES" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfODdBOEU4NTdfRUU4M180MUVGXzk0M0ZfM0FCRTgzODM5NTRGKQ==" autoIncrement="true"/>
+      <column name="FILTERID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="OEID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="CONSTRAINT_9" columns="ID"/>
+      <index name="FILTEROEFILTERIDINDEX" unique="false" columns="FILTERID"/>
+      <index name="FILTEROEOEIDINDEX" unique="false" columns="OEID"/>
+    </table>
+    <table name="FILTERTYPE" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNzNGRDY2NjJfMzVFN180OTBCX0FEREZfQ0E3RTMyRDIzNzlCKQ==" autoIncrement="true"/>
+      <column name="CODE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_C0" columns="ID"/>
+    </table>
+    <table name="MANUFACTOR" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfQUM5Qjg5MUFfRjI5Q180MDY4Xzg1Q0FfQjRBMjNCQkNFNDFFKQ==" autoIncrement="true"/>
+      <column name="DISABLED" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="VECHICLETYPEID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="CONSTRAINT_D" columns="ID"/>
+      <index name="VECHICLETYPEIDINDEX" unique="false" columns="VECHICLETYPEID"/>
+    </table>
+    <table name="MOTOR" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfQkQ5OTk4NTNfOTAwQV80MUQ1Xzg1RTdfNjE0QjIwOEFFQjlGKQ==" autoIncrement="true"/>
+      <column name="DATEF" sqlType="TIMESTAMP" length="23" precision="10" nullable="true" jdbcType="93"/>
+      <column name="DATET" sqlType="TIMESTAMP" length="23" precision="10" nullable="true" jdbcType="93"/>
+      <column name="DISABLED" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="ENGINE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="HP" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="KW" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <column name="SERIAID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="CONSTRAINT_4" columns="ID"/>
+      <index name="SERIAIDINDEX" unique="false" columns="SERIAID"/>
+    </table>
+    <table name="OE" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfRTVCNDUyNjdfMjA3MF80MzE4X0EzQzFfOEI2QkM1MDMyMkY5KQ==" autoIncrement="true"/>
+      <column name="BRANDID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="SEARCHNAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_9D" columns="ID"/>
+      <index name="BRANDIDINDEX" unique="false" columns="BRANDID"/>
+      <index name="OENI" unique="false" columns="NAME"/>
+      <index name="OESNI" unique="false" columns="SEARCHNAME"/>
+    </table>
+    <table name="RECORDATION" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfM0ZBMjIwRUFfNDExOV80RjUwXzhGMENfQTRGNzNBRDlDRTY0KQ==" autoIncrement="true"/>
+      <column name="DELETEOBJECT" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CURRENTDATE" sqlType="TIMESTAMP" length="23" precision="10" nullable="true" jdbcType="93"/>
+      <column name="IP" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_CE" columns="ID"/>
+    </table>
+    <table name="SERIA" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfMDc5MEYzRUFfQzZBQl80ODFEX0FEMTdfMjJGNUYwMkM2RDU4KQ==" autoIncrement="true"/>
+      <column name="DISABLED" sqlType="BOOLEAN" length="1" precision="0" nullable="false" jdbcType="16"/>
+      <column name="MANNSTATUS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="MANUFACTORID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <primary-key name="CONSTRAINT_4B" columns="ID"/>
+      <index name="MANUFACTORIDINDEX" unique="false" columns="MANUFACTORID"/>
+    </table>
+    <table name="SETTING" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNTAwMUY4OUFfQjFCMl80QTdBX0I0NkVfQkNERkZCRDQwNEVFKQ==" autoIncrement="true"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="VALUE" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_A" columns="ID"/>
+      <index name="SETTINGNAMEINDEX" unique="false" columns="NAME"/>
+    </table>
+    <table name="VECHICLETYPE" schema="PUBLIC" catalog="GOODWILLCATALOG" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNzdDRjlGOTVfOTA2NV80NTU1X0I1RjBfNTU4MjFBNUQ3Qjk0KQ==" autoIncrement="true"/>
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="ONSITE" sqlType="BOOLEAN" length="1" precision="0" nullable="true" jdbcType="16"/>
+      <primary-key name="CONSTRAINT_5" columns="ID"/>
+    </table>
+    <table name="V_FULL_EXPORT" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="VECHICLETYPE_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="VECHICLETYPE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MANUFACTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="MANUFACTOR_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SERIA_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="SERIA_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="MOTOR_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ENGINE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="KW" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="HP" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATEF" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATET" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_TYPE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_FULL_EXPORT_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="VECHICLETYPE_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="VECHICLETYPE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MANUFACTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="MANUFACTOR_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="SERIA_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="SERIA_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="MOTOR_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="ENGINE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="KW" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="HP" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATEF" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="DATET" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_TYPE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT1" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT1_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT2" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT2_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT3" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT3_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT4" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GLOBAL_VT4_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GROUPED" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GROUPED_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTERS" sqlType="VARCHAR" length="2147483647" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_MOTORS_FILTERS_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="MOTOR_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5"/>
+      <column name="FILTER_TYPE_CODE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_OE_REPORT" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="BRAND_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="OE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="V_OE_REPORT_GW" schema="PUBLIC" catalog="GOODWILLCATALOG" type="VIEW">
+      <column name="BRAND_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="FILTER_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="OE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+    </table>
+  </data-source>
+  <data-source source="LOCAL" name="ru:goodfil:catalog:ui:hibernate.cfg.xml" uuid="1da09926-3b0e-42fb-953f-094498392c06">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

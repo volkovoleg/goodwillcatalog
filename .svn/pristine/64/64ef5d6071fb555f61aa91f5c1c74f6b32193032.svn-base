@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+        <property name="hibernate.connection.driver_class">org.h2.Driver</property>
+        <property name="hibernate.connection.url">jdbc:h2:file:C:/.database/GoodwillCatalog</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+
+        <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <mapping class="ru.goodfil.catalog.domain.Brand"/>
+        <mapping class="ru.goodfil.catalog.domain.Filter"/>
+        <mapping class="ru.goodfil.catalog.domain.FilterForm"/>
+        <mapping class="ru.goodfil.catalog.domain.FiltersAndMotors"/>
+        <mapping class="ru.goodfil.catalog.domain.FiltersAndOes"/>
+        <mapping class="ru.goodfil.catalog.domain.Manufactor"/>
+        <mapping class="ru.goodfil.catalog.domain.Motor"/>
+        <mapping class="ru.goodfil.catalog.domain.Oe"/>
+        <mapping class="ru.goodfil.catalog.domain.Seria"/>
+        <mapping class="ru.goodfil.catalog.domain.Setting"/>
+        <mapping class="ru.goodfil.catalog.domain.dict.FilterType"/>
+        <mapping class="ru.goodfil.catalog.domain.dict.VechicleType"/>
+        <mapping class="ru.goodfil.catalog.domain.Recordation"/>
+    </session-factory>
+</hibernate-configuration>

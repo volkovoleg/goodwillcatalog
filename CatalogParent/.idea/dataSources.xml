@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3563718361">
+    <data-source source="LOCAL" name="src:main:webapp:WEB-INF:hibernate.cfg.xml" uuid="e09bfb59-ad44-4c60-8b0e-5dd579f06da3">
+      <driver-ref>h2.embedded</driver-ref>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:C:/.database/GoodwillCatalog;CACHE_SIZE=65536;DB_CLOSE_DELAY=-1;AUTOCOMMIT=ON;LOCK_MODE=0;AUTO_RECONNECT=TRUE</jdbc-url>
+      <user-name>sa</user-name>
+      <libraries>
+        <library>
+          <url>file://C:\Users\Волков Олег\.m2\repository\com\h2database\h2\1.3.168\h2-1.3.168.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="ru:goodfil:catalog:adapters:hibernate.cfg.xml" uuid="3cbc422c-fd45-4d20-883b-2270b7ba8b73">
+      <driver-ref>h2.embedded</driver-ref>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:C:/.database/GoodwillCatalog</jdbc-url>
+      <user-name>sa</user-name>
+      <libraries>
+        <library>
+          <url>file://C:\Users\Волков Олег\.m2\repository\com\h2database\h2\1.3.168\h2-1.3.168.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="ru:goodfil:catalog:ui:hibernate.cfg.xml" uuid="1da09926-3b0e-42fb-953f-094498392c06">
+      <driver-ref>h2.embedded</driver-ref>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:C:/.database/GoodwillCatalog</jdbc-url>
+      <user-name>sa</user-name>
+      <libraries>
+        <library>
+          <url>file://C:\Users\Волков Олег\.m2\repository\com\h2database\h2\1.3.168\h2-1.3.168.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

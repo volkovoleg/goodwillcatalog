@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CatalogMann/src/main/catalog.mann.iml" filepath="$PROJECT_DIR$/CatalogMann/src/main/catalog.mann.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CatalogRunner/src/main/catalog.runner.iml" filepath="$PROJECT_DIR$/CatalogRunner/src/main/catalog.runner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CatalogUI/src/main/catalog.ui.iml" filepath="$PROJECT_DIR$/CatalogUI/src/main/catalog.ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CatalogUtils/src/main/catalog.utils.iml" filepath="$PROJECT_DIR$/CatalogUtils/src/main/catalog.utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CatalogWeb/src/main/catalog.web.iml" filepath="$PROJECT_DIR$/CatalogWeb/src/main/catalog.web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CatalogCore/src/main/main.iml" filepath="$PROJECT_DIR$/CatalogCore/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CatalogAdapters/src/main/main1.iml" filepath="$PROJECT_DIR$/CatalogAdapters/src/main/main1.iml" />
+    </modules>
+  </component>
+</project>
+
