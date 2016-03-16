@@ -3,12 +3,13 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/../CatalogAdapters" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../CatalogCore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../CatalogExceptionService" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../CatalogMann" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../CatalogRunner" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../CatalogUI" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../CatalogUtils" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../CatalogWeb" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
-

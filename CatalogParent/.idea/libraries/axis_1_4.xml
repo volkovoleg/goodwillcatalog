@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="axis-1.4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/axis/axis-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

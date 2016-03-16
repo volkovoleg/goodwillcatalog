@@ -7,26 +7,30 @@ package ru.goodfil.catalog.ui.forms;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 import ru.goodfil.catalog.ui.swing.UIUtils;
-
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
-import javax.swing.*;
+import ru.goodfil.catalog.ex.*;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Properties;
+import javax.swing.*;
+
+//import javax.activation.DataHandler;
+//import javax.activation.DataSource;
+//import javax.activation.FileDataSource;
+//import javax.jws.WebParam;
+//import javax.mail.*;
+//import javax.mail.internet.InternetAddress;
+//import javax.mail.internet.MimeBodyPart;
+//import javax.mail.internet.MimeMessage;
+//import javax.mail.internet.MimeMultipart;
+//import javax.xml.bind.JAXBElement;
+//import java.io.BufferedWriter;
+//import java.io.File;
+//import java.io.FileWriter;
+//import java.io.IOException;
+//import java.text.StringCharacterIterator;
+//import java.util.Properties;
 
 /**
  * @author sazonovkirill@gmail.com
@@ -75,14 +79,23 @@ public class ExceptionWindow extends JDialog {
 
     private void btnOkActionPerformed(ActionEvent e) {
         try {
-            String text = tbError.getText();
-            String filename = generateAttachmentFile(text);
+            String username = System.getProperties().getProperty("user.name");
 
-            sendEmailWithAttachment(SMTP_HOST, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD,
-                    DEVELOPER_MAIL, SUBJECT + timestamp, TEXT, filename);
+            ExceptionServiceLocator locator = new ExceptionServiceLocator();
+            IExceptionService service = locator.getBasichttpExcServiceEndpiont();
+
+            ExceptionContract contract = new ExceptionContract();
+            contract.setMessage(SUBJECT);
+            contract.setTrace(tbError.getText());
+
+            service.exceptionManager(contract, username);
+            //String filename = generateAttachmentFile(text);
+            //sendEmailWithAttachment(SMTP_HOST, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD,
+            //        DEVELOPER_MAIL, SUBJECT + timestamp, TEXT, filename);
             UIUtils.info("Очет об ошибке отправлен на эл. почту разработчика.");
             dispose();
         } catch (Exception e2) {
+            e2.getMessage();
             e2.printStackTrace();
             UIUtils.warning("Не удается отправить отчет об ошибке по эл.почте. Скопируйте текст ошибки и отправьте вручную.");
         }
@@ -94,7 +107,7 @@ public class ExceptionWindow extends JDialog {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner non-commercial license
+        // Generated using JFormDesigner Evaluation license - Ð¡ÑÐ°Ð½Ð¸ÑÐ»Ð°Ð² Ð¢Ð¸ÑÐ¾Ð²
         contentPanel = new JPanel();
         label3 = new JLabel();
         label1 = new JLabel();
@@ -111,14 +124,22 @@ public class ExceptionWindow extends JDialog {
         setTitle("\u041e\u0439! \u041a \u0441\u043e\u0436\u0430\u043b\u0435\u043d\u0438\u044e \u043f\u0440\u043e\u0438\u0437\u043e\u0448\u043b\u0430 \u043e\u0448\u0438\u0431\u043a\u0430.");
         Container contentPane = getContentPane();
         contentPane.setLayout(new FormLayout(
-                "default:grow, $rgap",
-                "$rgap, fill:default:grow"));
+            "default:grow, $rgap",
+            "$rgap, fill:default:grow"));
 
         //======== contentPanel ========
         {
+
+            // JFormDesigner evaluation mark
+            contentPanel.setBorder(new javax.swing.border.CompoundBorder(
+                new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
+                    "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
+                    javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+                    java.awt.Color.red), contentPanel.getBorder())); contentPanel.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
+
             contentPanel.setLayout(new FormLayout(
-                    "$rgap, default, default:grow",
-                    "12dlu, 10dlu, fill:73dlu:grow, $rgap, default"));
+                "$rgap, default, default:grow",
+                "12dlu, 10dlu, fill:73dlu:grow, $rgap, default"));
 
             //---- label3 ----
             label3.setIcon(new ImageIcon(getClass().getResource("/ru/goodfil/catalog/ui/icons/stop.png")));
@@ -147,8 +168,8 @@ public class ExceptionWindow extends JDialog {
             //======== panel1 ========
             {
                 panel1.setLayout(new FormLayout(
-                        "default:grow, 2*($lcgap, default)",
-                        "default"));
+                    "default:grow, 2*($lcgap, default)",
+                    "default"));
 
                 //---- btnOk ----
                 btnOk.setText("\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u043e\u0442\u0447\u0435\u0442");
@@ -181,15 +202,15 @@ public class ExceptionWindow extends JDialog {
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
-    private final static String SMTP_HOST = "smtp.yandex.ru";
-    private final static String SMTP_PORT = "25";
-    private final static String SMTP_USERNAME = "goodwill-robot@yandex.ru";
-    private final static String SMTP_PASSWORD = "1570920";
-    private final static String DEVELOPER_MAIL = "Alfa-11@goodfil.com";
+    //private final static String SMTP_HOST = "smtp.yandex.ru";
+   // private final static String SMTP_PORT = "25";
+   // private final static String SMTP_USERNAME = "goodwill-robot@yandex.ru";
+    //private final static String SMTP_PASSWORD = "1570920";
+   // private final static String DEVELOPER_MAIL = "Alfa-11@goodfil.com";
     private final static String SUBJECT = "Ошибка в приложении \"Каталог\" ";
-    private final static String TEXT = "Внимание! В приложении \"Каталог\" произошла ошибка. Текст ошибки приладывается.";
+    //private final static String TEXT = "Внимание! В приложении \"Каталог\" произошла ошибка. Текст ошибки приладывается.";
 
-    private static String generateAttachmentFile(String text) throws IOException {
+    /*private static String generateAttachmentFile(String text) throws IOException {
 
 
         File tempFile = File.createTempFile("error", ".txt");
@@ -200,9 +221,9 @@ public class ExceptionWindow extends JDialog {
         writer.close();
 
         return tempFile.getAbsolutePath();
-    }
+    }*/
 
-    private static void sendEmailWithAttachment(final String smtpHost, final String port, final String username, final String password, String email, String caption, String body, String attachmentFile) throws MessagingException, MessagingException {
+        /*private static void sendEmailWithAttachment(final String smtpHost, final String port, final String username, final String password, String email, String caption, String body, String attachmentFile) throws MessagingException, MessagingException {
         Properties props = new Properties();
         props.put("mail.smtp.host", smtpHost);
         props.put("mail.smtp.port", new Integer(port));
@@ -243,10 +264,10 @@ public class ExceptionWindow extends JDialog {
 
             Transport.send(message);
         }
-    }
+    }*/
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner non-commercial license
+    // Generated using JFormDesigner Evaluation license - Ð¡ÑÐ°Ð½Ð¸ÑÐ»Ð°Ð² Ð¢Ð¸ÑÐ¾Ð²
     private JPanel contentPanel;
     private JLabel label3;
     private JLabel label1;

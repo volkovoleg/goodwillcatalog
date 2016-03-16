@@ -14,15 +14,15 @@
     <orderEntry type="library" name="Maven: com.jgoodies:forms:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: com.jgoodies:looks:2.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:catalina:6.0.35" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:servlet-api:6.0.35" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:juli:6.0.35" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:annotations-api:6.0.35" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:servlet-api:6.0.35" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:coyote:6.0.35" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:jasper:6.0.35" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:jsp-api:6.0.35" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:el-api:6.0.35" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jdt.core.compiler:ecj:3.7" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:el-api:6.0.35" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:jasper-el:6.0.35" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:juli:6.0.35" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:jsp-api:6.0.35" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:tribes:6.0.35" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:catalina-ha:6.0.35" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:dbcp:6.0.35" level="project" />

@@ -286,7 +286,7 @@ public class MainWindow extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Sasha Ivanov
+        // Generated using JFormDesigner Evaluation license - Ð¡ÑÐ°Ð½Ð¸ÑÐ»Ð°Ð² Ð¢Ð¸ÑÐ¾Ð²
         applicationMenuBar = new JMenuBar();
         applicationMenu = new JMenu();
         openMenuItem = new JMenuItem();
@@ -535,7 +535,7 @@ public class MainWindow extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Sasha Ivanov
+    // Generated using JFormDesigner Evaluation license - Ð¡ÑÐ°Ð½Ð¸ÑÐ»Ð°Ð² Ð¢Ð¸ÑÐ¾Ð²
     private JMenuBar applicationMenuBar;
     private JMenu applicationMenu;
     private JMenuItem openMenuItem;

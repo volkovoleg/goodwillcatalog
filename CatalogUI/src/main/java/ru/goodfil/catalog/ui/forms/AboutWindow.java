@@ -4,6 +4,8 @@
 
 package ru.goodfil.catalog.ui.forms;
 
+import com.google.inject.internal.Errors;
+import com.google.inject.internal.ErrorsException;
 import com.jgoodies.forms.factories.Borders;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;

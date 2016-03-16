@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../CatalogAdapters/catalog.adapters.iml" filepath="$PROJECT_DIR$/../CatalogAdapters/catalog.adapters.iml" />
       <module fileurl="file://$PROJECT_DIR$/../CatalogCore/catalog.core.iml" filepath="$PROJECT_DIR$/../CatalogCore/catalog.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CatalogExceptionService/catalog.ex.iml" filepath="$PROJECT_DIR$/../CatalogExceptionService/catalog.ex.iml" />
       <module fileurl="file://$PROJECT_DIR$/../CatalogMann/catalog.mann.iml" filepath="$PROJECT_DIR$/../CatalogMann/catalog.mann.iml" />
       <module fileurl="file://$PROJECT_DIR$/catalog.parent.iml" filepath="$PROJECT_DIR$/catalog.parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/../CatalogRunner/catalog.runner.iml" filepath="$PROJECT_DIR$/../CatalogRunner/catalog.runner.iml" />
@@ -13,4 +14,3 @@
     </modules>
   </component>
 </project>
-
